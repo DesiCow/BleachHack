@@ -14,7 +14,6 @@ public class NoDemo extends Module {
 
     @BleachSubscribe
     public void onGameEvent(EventPacket.Read event) {
-        System.out.println(event.getPacket().toString());
         if (event.getPacket() instanceof GameStateChangeS2CPacket packet) {
             if (packet.getReason() == GameStateChangeS2CPacket.GAME_WON || packet.getReason() == GameStateChangeS2CPacket.DEMO_MESSAGE_SHOWN) {
                 event.setCancelled(true);
