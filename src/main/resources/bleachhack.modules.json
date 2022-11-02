@@ -58,6 +58,8 @@
     "MouseFriend",
     "Nametags",
     "NewChunks",
+    "NoBorder",
+    "NoDemo",
     "Nofall",
     "NoInteract",
     "NoKeyBlock",
