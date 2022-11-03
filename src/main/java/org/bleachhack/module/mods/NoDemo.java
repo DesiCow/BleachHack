@@ -9,7 +9,7 @@ import org.bleachhack.module.ModuleCategory;
 public class NoDemo extends Module {
 
     public NoDemo() {
-        super("NoDemo", KEY_UNBOUND, ModuleCategory.MISC, "Cancel Incoming Demo Screen and Game Won Packets");
+        super("NoDemo", KEY_UNBOUND, ModuleCategory.LIVEOVERFLOW, "Cancel Incoming Demo Screen and Game Won Packets");
     }
 
     @BleachSubscribe

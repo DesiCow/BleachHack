@@ -10,6 +10,7 @@ package org.bleachhack.mixin;
 
 import org.bleachhack.BleachHack;
 import org.bleachhack.event.events.EventDamage;
+import org.bleachhack.module.mods.WorldGuardBypass;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
@@ -27,6 +28,12 @@ public abstract class MixinLivingEntity extends Entity {
 
 	private MixinLivingEntity(EntityType<?> type, World world) {
 		super(type, world);
+	}
+
+	// Disable regular movement when WorldGuard Bypass is enabled
+	@Redirect(method = "tickMovement", at = @At(value = "INVOKE", target = "Lnet/minecraft/entity/LivingEntity;isImmobile()Z"))
+	private boolean isImmobile(net.minecraft.entity.LivingEntity livingEntity) {
+		return WorldGuardBypass.isWorldGuardBypassEnabled;
 	}
 
 	@Redirect(method = "takeKnockback", at = @At(value = "INVOKE", target = "Lnet/minecraft/entity/LivingEntity;setVelocity(DDD)V"))

@@ -48,6 +48,8 @@
     "MixinParticleManager",
     "MixinPlayerEntity",
     "MixinPlayerListHud",
+    "MixinPlayerPositionFullPacket",
+    "MixinPlayerPositionPacket",
     "MixinRenderLayers",
     "MixinRenderTickCounter",
     "MixinScreen",
@@ -56,6 +58,7 @@
     "MixinSharedConstants",
     "MixinSoundSystem",
     "MixinTitleScreen",
+    "MixinVehicleMovePacket",
     "MixinWorldRenderer"
   ],
   "mixinPriority" : 899,

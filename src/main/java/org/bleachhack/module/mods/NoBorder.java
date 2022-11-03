@@ -9,7 +9,7 @@ import org.bleachhack.module.ModuleCategory;
 public class NoBorder extends Module {
 
     public NoBorder() {
-        super("NoBorder", KEY_UNBOUND, ModuleCategory.WORLD, "Cancel incoming Worldborder Packets");
+        super("NoBorder", KEY_UNBOUND, ModuleCategory.LIVEOVERFLOW, "Cancel incoming Worldborder Packets");
     }
 
     @BleachSubscribe
